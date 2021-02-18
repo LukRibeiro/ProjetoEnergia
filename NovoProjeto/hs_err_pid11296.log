@@ -1,0 +1,187 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=11296, tid=0x0000000000001984
+#
+# JRE version:  (8.0_202-b08) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.202-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002d23800):  JavaThread "Unknown thread" [_thread_in_vm, id=6532, stack(0x0000000002bd0000,0x0000000002cd0000)]
+
+Stack: [0x0000000002bd0000,0x0000000002cd0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002d23800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6532, stack(0x0000000002bd0000,0x0000000002cd0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000090000000, size: 1792 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 33280K, used 573K [0x00000000dab00000, 0x00000000dd000000, 0x0000000100000000)
+  eden space 28672K, 2% used [0x00000000dab00000,0x00000000dab8f5d0,0x00000000dc700000)
+  from space 4608K, 0% used [0x00000000dcb80000,0x00000000dcb80000,0x00000000dd000000)
+  to   space 4608K, 0% used [0x00000000dc700000,0x00000000dc700000,0x00000000dcb80000)
+ ParOldGen       total 76800K, used 0K [0x0000000090000000, 0x0000000094b00000, 0x00000000dab00000)
+  object space 76800K, 0% used [0x0000000090000000,0x0000000090000000,0x0000000094b00000)
+ Metaspace       used 751K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00000000169a0000,0x0000000016d30000] byte_map_base: 0x0000000016520000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005ce95ce0
+ Begin Bits: [0x0000000017190000, 0x0000000018d90000)
+ End Bits:   [0x0000000018d90000, 0x000000001a990000)
+
+Polling page: 0x0000000000bf0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000075e0000, 0x0000000007850000, 0x00000000165e0000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.052 loading class java/lang/Short
+Event: 0.052 loading class java/lang/Short done
+Event: 0.052 loading class java/lang/Integer
+Event: 0.052 loading class java/lang/Integer done
+Event: 0.052 loading class java/lang/Long
+Event: 0.052 loading class java/lang/Long done
+Event: 0.053 loading class java/lang/NullPointerException
+Event: 0.053 loading class java/lang/NullPointerException done
+Event: 0.053 loading class java/lang/ArithmeticException
+Event: 0.053 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7b22d0000 - 0x00007ff7b2307000 	C:\Program Files\Java\jre1.8.0_202\bin\javaw.exe
+0x00007ffa40f20000 - 0x00007ffa41110000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffa3fd50000 - 0x00007ffa3fe02000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffa3e1d0000 - 0x00007ffa3e475000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffa40e20000 - 0x00007ffa40ec3000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffa3fb20000 - 0x00007ffa3fbbe000 	C:\windows\System32\msvcrt.dll
+0x00007ffa40670000 - 0x00007ffa40707000 	C:\windows\System32\sechost.dll
+0x00007ffa3fbc0000 - 0x00007ffa3fce0000 	C:\windows\System32\RPCRT4.dll
+0x00007ffa3f400000 - 0x00007ffa3f595000 	C:\windows\System32\USER32.dll
+0x00007ffa3eea0000 - 0x00007ffa3eec1000 	C:\windows\System32\win32u.dll
+0x00007ffa3f5a0000 - 0x00007ffa3f5c6000 	C:\windows\System32\GDI32.dll
+0x00007ffa3ed00000 - 0x00007ffa3ee96000 	C:\windows\System32\gdi32full.dll
+0x00007ffa3e050000 - 0x00007ffa3e0ee000 	C:\windows\System32\msvcp_win.dll
+0x00007ffa3ec00000 - 0x00007ffa3ecfa000 	C:\windows\System32\ucrtbase.dll
+0x00007ffa2aa20000 - 0x00007ffa2aca4000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1082_none_9e8193e1e45b25c1\COMCTL32.dll
+0x00007ffa3f5d0000 - 0x00007ffa3f905000 	C:\windows\System32\combase.dll
+0x00007ffa3e150000 - 0x00007ffa3e1d0000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffa3f320000 - 0x00007ffa3f34e000 	C:\windows\System32\IMM32.DLL
+0x00007ffa3dc80000 - 0x00007ffa3dcba000 	C:\windows\SYSTEM32\privman64.dll
+0x00007ffa3fef0000 - 0x00007ffa405d7000 	C:\windows\System32\SHELL32.dll
+0x00007ffa3e000000 - 0x00007ffa3e04a000 	C:\windows\System32\cfgmgr32.dll
+0x00007ffa3f050000 - 0x00007ffa3f0f9000 	C:\windows\System32\shcore.dll
+0x00007ffa3e480000 - 0x00007ffa3ec00000 	C:\windows\System32\windows.storage.dll
+0x00007ffa3ddf0000 - 0x00007ffa3de13000 	C:\windows\System32\profapi.dll
+0x00007ffa3de60000 - 0x00007ffa3deaa000 	C:\windows\System32\powrprof.dll
+0x00007ffa3dde0000 - 0x00007ffa3ddf0000 	C:\windows\System32\UMPDC.dll
+0x00007ffa3fe90000 - 0x00007ffa3fee2000 	C:\windows\System32\shlwapi.dll
+0x00007ffa3de40000 - 0x00007ffa3de51000 	C:\windows\System32\kernel.appcore.dll
+0x00007ffa3ef00000 - 0x00007ffa3ef17000 	C:\windows\System32\cryptsp.dll
+0x00007ffa40710000 - 0x00007ffa40867000 	C:\windows\System32\ole32.dll
+0x00007ffa3dcc0000 - 0x00007ffa3dce5000 	C:\windows\SYSTEM32\USERENV.dll
+0x00007ffa19f30000 - 0x00007ffa19fe2000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPApi.dll
+0x00000000013c0000 - 0x000000000141c000 	C:\windows\System32\WINTRUST.dll
+0x00007ffa3de20000 - 0x00007ffa3de32000 	C:\windows\System32\MSASN1.dll
+0x00007ffa3deb0000 - 0x00007ffa3dff9000 	C:\windows\System32\CRYPT32.dll
+0x000000005d4f0000 - 0x000000005d4fc000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPThe.dll
+0x00007ffa20fc0000 - 0x00007ffa210f2000 	C:\Program Files (x86)\Manufacturer\Endpoint Agent\clpbm64.dll
+0x00007ffa3f910000 - 0x00007ffa3f9d5000 	C:\windows\System32\OLEAUT32.dll
+0x00007ffa40600000 - 0x00007ffa40608000 	C:\windows\System32\PSAPI.DLL
+0x00007ffa39a40000 - 0x00007ffa39a4c000 	C:\windows\SYSTEM32\Secur32.dll
+0x00007ffa2d440000 - 0x00007ffa2d4e6000 	C:\windows\SYSTEM32\MSVCP120.dll
+0x00007ffa2d820000 - 0x00007ffa2d90f000 	C:\windows\SYSTEM32\MSVCR120.dll
+0x00007ffa3dcf0000 - 0x00007ffa3dd27000 	C:\windows\SYSTEM32\SSPICLI.DLL
+0x000000005d0d0000 - 0x000000005d1a2000 	C:\Program Files\Java\jre1.8.0_202\bin\msvcr100.dll
+0x000000005c670000 - 0x000000005cf15000 	C:\Program Files\Java\jre1.8.0_202\bin\server\jvm.dll
+0x00007ffa2d390000 - 0x00007ffa2d399000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ffa3fce0000 - 0x00007ffa3fd4f000 	C:\windows\System32\WS2_32.dll
+0x00007ffa1ff10000 - 0x00007ffa1ff34000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ffa37eb0000 - 0x00007ffa37eba000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffa1fee0000 - 0x00007ffa1ff0d000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x00007ffa3a8f0000 - 0x00007ffa3a8ff000 	C:\Program Files\Java\jre1.8.0_202\bin\verify.dll
+0x00007ffa229c0000 - 0x00007ffa229e9000 	C:\Program Files\Java\jre1.8.0_202\bin\java.dll
+0x00007ffa2a5f0000 - 0x00007ffa2a606000 	C:\Program Files\Java\jre1.8.0_202\bin\zip.dll
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=Cp1252 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 4082 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -classNames teste.abrirnavegador
+java_class_path (initial): C:\Users\p-lucribeiro\Documents\workspace-sts-3.9.12.RELEASE\NovoProjeto\target\test-classes;C:\Users\p-lucribeiro\Documents\workspace-sts-3.9.12.RELEASE\NovoProjeto\target\classes;C:\Users\p-lucribeiro\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\p-lucribeiro\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-java\3.6.0\selenium-java-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-api\3.6.0\selenium-api-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.6.0\selenium-edge-driver-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.6.0\selenium-firefox-driver-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.6.0\selenium-ie-driver-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.6.0\selenium-opera-driver-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.6.0\selenium-remote-driver-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.6.0\selenium-safari-driver-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\org\seleniumhq\selenium\selenium-support\3.6.0\selenium-support-3.6.0.jar;C:\Users\p-lucribeiro\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\p-lucribeiro\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\p-lucribeiro\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\p-lucribeiro\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\p-lucribeiro\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\p-lucribeiro\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\p-lucribeiro\.m2\repository\com\google\c
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_202/bin/server;C:/Program Files/Java/jre1.8.0_202/bin;C:/Program Files/Java/jre1.8.0_202/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Users\p-lucribeiro\AppData\Local\Microsoft\WindowsApps;;C:\Users\p-lucribeiro\Downloads\spring-tool-suite-3.9.12.RELEASE-e4.15.0-win32-x86_64 (4)\sts-bundle\sts-3.9.12.RELEASE;
+USERNAME=p-lucribeiro
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 85 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.1082)
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 85 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, bmi1, bmi2, adx
+
+Memory: 4k page, physical 7339572k(630536k free), swap 9174320k(5768k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Dec 15 2018 19:54:30 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Feb 11 19:37:56 2021
+timezone: E. South America Standard Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
